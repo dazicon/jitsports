@@ -103,6 +103,16 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'name' => [
+           'required' => '姓名不能为空',
+        ],
+        'stu_id' => [
+           'required' => '学号不能为空',
+           'numeric' => '学号须为数字',
+        ],
+        'class' => [
+           'required' => '班级不能为空',
+        ],
     ],
 
     /*
