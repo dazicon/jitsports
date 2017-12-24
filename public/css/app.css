@@ -8406,14 +8406,6 @@ p {
   background-color: #DDDDDD;
 }
 
-.navbar-inverse nav {
-  color: #555;
-}
-
-.navbar-inverse ul:hover {
-  color: #222;
-}
-
 #logo {
   float: left;
   margin-right: 10px;
