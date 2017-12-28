@@ -8,8 +8,8 @@
       <h5>注册</h5>
     </div>
     <div class="panel-body">
-      @include('shared._error')
-      
+      @include('shared._errors')
+
       <form method="POST" action="{{ route('users.store') }}">
         {{ csrf_field() }}
 
@@ -44,6 +44,8 @@
           </div>
 
           <button type="submit" class="btn btn-primary">注册</button>
+          <hr>
+          <p>已有帐号，<a href="{{ route('login') }}">直接登录>></a></p>
       </form>
     </div>
   </div>
