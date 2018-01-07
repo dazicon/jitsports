@@ -14,7 +14,7 @@ class SessionsController extends Controller
         //只让未登录用户访问登录页面
         $this->middleware('guest',[
             'only' => ['create']
-        ])
+        ]);
     }
     /**
      * 进入登录页面
