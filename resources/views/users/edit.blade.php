@@ -33,7 +33,7 @@
 
             <div class="form-group">
               <label for="stu_id">学号：</label>
-              <input type="text" name="stu_id" class="form-control" value="{{ $user->stu_id }}">
+              <input type="text" name="stu_id" class="form-control" value="{{ $user->stu_id }}" disabled>
             </div>
 
             <div class="form-group">
