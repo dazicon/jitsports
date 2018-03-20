@@ -36,6 +36,7 @@ class SessionsController extends Controller
 
        if (Auth::attempt($credentials,$request->has('remember'))) {
            session()->flash('success','欢迎回来!');
+           //intended方法可将页面重定向到上一次请求尝试访问的页面上，并接受一个默认跳转地址参数
            return redirect()->intended(route('users.show',[Auth::user()]));
        } else {
            session()->flash('danger','sorry,您的邮箱与密码不匹配');

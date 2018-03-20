@@ -37,8 +37,8 @@
             </div>
 
             <div class="form-group">
-              <label for="class">班级：</label>
-              <input type="text" name="class" class="form-control" value="{{ $user->class }}">
+              <label for="klass">班级：</label>
+              <input type="text" name="klass" class="form-control" value="{{ $user->klass }}">
             </div>
 
             <div class="form-group">
