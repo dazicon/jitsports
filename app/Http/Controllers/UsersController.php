@@ -47,7 +47,10 @@ class UsersController extends Controller
      */
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        $statuses = $user->statuses()
+                         ->orderBy('created_at','desc')
+                         ->paginate(10);
+        return view('users.show', compact('user', 'statuses'));
     }
 
     /**
@@ -125,6 +128,13 @@ class UsersController extends Controller
         return redirect()->route('users.show',$user->id);
     }
 
+    /**
+     * 删除用户
+     * @param User $user
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
     public function destroy(User $user)
     {
         $this->authorize('destroy', $user);
