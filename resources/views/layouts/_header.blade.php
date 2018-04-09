@@ -15,8 +15,11 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="{{ route('users.index') }}">校友</a></li>
-          @if (Auth::check())
 
+          @if (Auth::check())
+            <a href="{{ route('users.show', Auth::user()->id) }}">
+                <img src="{{ Auth::user()->gravatar('140') }}" alt="{{ Auth::user()->name }}" class="gravatar_header"/>
+            </a>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 {{ Auth::user()->name }} <b class="caret"></b>

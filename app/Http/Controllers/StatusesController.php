@@ -46,4 +46,12 @@ class StatusesController extends Controller
         session()->flash('success', '动态已被成功删除！');
         return redirect()->back();
     }
+
+    public function show(Status $status)
+    {
+        $comments = $status->comments()
+            ->orderBy('created_at', 'desc')
+            ->paginate(30);
+        return view('statuses._status', compact('status', 'comments'));
+    }
 }

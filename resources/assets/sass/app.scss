@@ -76,6 +76,13 @@ p {
   }
 }
 
+.gravatar_header {
+    float: left;
+    margin-top: 10px;
+    max-width: 30px;
+    border-radius: 50%;
+}
+
 /* footer */
 
 footer {
@@ -221,6 +228,10 @@ input {
     margin-top: 25px;
 }
 
+.comment_btn {
+    //float: right;
+}
+
 /* Users edit */
 
 .gravatar_edit {
@@ -288,12 +299,30 @@ input {
         margin-right: 10px;
         margin-top: 5px;
     }
+    .gravatar-reply {
+        margin-right: 20px;
+        margin-left: 10px;
+        width: 30px;
+        float: left;
+    }
     form {
         button.status-delete-btn {
             position: absolute;
             right: 0;
             top: 10px;
         }
+    }
+    .comment-form {
+        height: 110px;
+        width: 720px;
+    }
+    .text-field{
+        height: 40px;
+        width: 610px;
+    }
+    .comment-field-style {
+        margin-right: 50px;
+        float: right;
     }
 }
 
@@ -306,4 +335,20 @@ aside {
 
 .status_form {
     margin-top: 20px;
+}
+
+.status-comment {
+    hr {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .meta {
+        font-size: .9em;
+        color: #b3b3b3;
+    }
 }

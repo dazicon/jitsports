@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\ResetPassword;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Comment;
 
 
 class User extends Authenticatable
@@ -56,6 +57,15 @@ class User extends Authenticatable
     public function statuses()
     {
         return $this->hasMany(Status::class);
+    }
+
+    /**
+     * 一个用户可拥有多条评论
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
     /**

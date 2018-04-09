@@ -28,6 +28,7 @@
               {!! $statuses->render() !!}
           @endif
     </div>
+
   </div>
 </div>
 @stop

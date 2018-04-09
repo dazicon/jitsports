@@ -16,4 +16,14 @@ class Status extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * 一个动态可拥有多条评论
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
 }

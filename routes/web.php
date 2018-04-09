@@ -36,3 +36,5 @@ Route::get('users/{user}/followings','UsersController@followings')->name('users.
 
 Route::post('/users/followers/{user}', 'FollowersController@store')->name('followers.store');
 Route::delete('/users/followers/{user}', 'FollowersController@destroy')->name('followers.destroy');
+
+Route::resource('comments','CommentsController',['only' => ['store','destroy']]);

@@ -53,6 +53,14 @@ class UsersController extends Controller
         return view('users.show', compact('user', 'statuses'));
     }
 
+    public function showComment(User $user)
+    {
+        $comments = $user->comments()
+            ->orderBy('created_at', 'desc')
+            ->paginate(30);
+        return view('users.showComment', compact('user', 'comments'));
+    }
+
     /**
      * 用户注册
      * validate验证

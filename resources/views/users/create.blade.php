@@ -30,7 +30,7 @@
 
           <div class="form-group">
             <label for="klass">班级：</label>
-            <input type="text" name="class" class="form-control" value="{{ old('klass') }}">
+            <input type="text" name="klass" class="form-control" value="{{ old('klass') }}">
           </div>
 
           <div class="form-group">
