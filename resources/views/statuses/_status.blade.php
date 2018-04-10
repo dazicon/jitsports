@@ -21,7 +21,7 @@
     {{-- 评论列表 --}}
     <div class="panel panel-default status-comment">
         <div class="panel-body">
-            @include('statuses._comment_box', ['status' => $status])
+            @includeWhen(Auth::check(),'statuses._comment_box', ['status' => $status])
             @include('statuses._comment_list', ['comments' => $status->comments()->with('user')->get()])
         </div>
     </div>

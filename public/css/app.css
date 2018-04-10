@@ -8721,3 +8721,7 @@ aside textarea {
   color: #b3b3b3;
 }
 
+.reply-list .gravatar-reply {
+  width: 30px;
+}
+
