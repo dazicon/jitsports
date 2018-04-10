@@ -6,9 +6,12 @@
     <a href="{{ route('users.show', $user->id )}}">{{ $user->name }}</a>
     </span>
     <span class="timestamp">
-    {{ $status->created_at->diffForHumans() }}
+    {{ $status->created_at->diffForHumans() }} |
+        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+        {{ $status->comment_count }}
     </span>
     <span class="content">{{ $status->content }}</span>
+
 
     @can('destroy', $status)
         <form action="{{ route('statuses.destroy', $status->id) }}" method="POST">

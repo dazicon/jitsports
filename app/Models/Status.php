@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Status extends Model
 {
-    protected $fillable = ['content'];
+    protected $fillable = ['content','comment_count'];
 
     /**
      * 一条动态属于一个用户

@@ -22,10 +22,15 @@ class CommentsController extends Controller
         $comment->status_id = $request->status_id;
         $comment->save();
 
-        if (empty($comment)){
-            return redirect()->back()->withErrors('评论内容不能为空');
-        }
 
-        return redirect()->to($comment->status->link())->with('success','创建成功!');
+        return redirect()->back()->with('success','创建成功!');
+    }
+
+    public function destroy(Comment $comment)
+    {
+        $this->authorize('destroy', $comment);
+        $comment->delete();
+
+        return redirect()->route('comments.index')->with('success', '删除成功！');
     }
 }

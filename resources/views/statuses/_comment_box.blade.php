@@ -1,4 +1,4 @@
-{{--@include('common.error')--}}
+@include('common.error')
 <div class="comment-box">
     <form action="{{ route('comments.store') }}" method="POST" accept-charset="UTF-8">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
