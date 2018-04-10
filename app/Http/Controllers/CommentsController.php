@@ -31,6 +31,6 @@ class CommentsController extends Controller
         $this->authorize('destroy', $comment);
         $comment->delete();
 
-        return redirect()->route('comments.index')->with('success', '删除成功！');
+        return redirect()->back()->with('success', '删除成功！');
     }
 }

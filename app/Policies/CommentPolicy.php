@@ -15,6 +15,7 @@ class CommentPolicy extends Policy
 
     public function destroy(User $user, Comment $comment)
     {
-        return true;
+        //return true;
+        return $user->isAuthorOf($comment) || $user->isAuthorOf($comment->status);
     }
 }

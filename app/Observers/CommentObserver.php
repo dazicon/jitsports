@@ -24,4 +24,9 @@ class CommentObserver
     {
         //
     }
+
+    public function deleted(Comment $comment)
+    {
+        $comment->status->decrement('comment_count', 1);
+    }
 }

@@ -132,4 +132,14 @@ class User extends Authenticatable
         return $this->followings->contains($user_id);
     }
 
+    /**
+     * 自定义的辅助方法，增加可读性
+     * @param $model
+     * @return bool
+     */
+    public function isAuthorOf($model)
+    {
+        return $this->id == $model->user_id;
+    }
+
 }
